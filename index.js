@@ -9,12 +9,11 @@ const literTGoGal = 0.264
 const kiloToPound = 2.204
 let convertBtn = document.getElementById("convert-btn")
 let length = document.getElementById("length-el")
+let inputEl = document.getElementById("input")
 
-const getLength = () => {
-    return meter / feet
-}
 
 convertBtn.addEventListener("click", function() {
-    console.log("convert clicked")
-    getLength()
+    let baseValue = inputEl.value
+    
+    length.textContent = `${baseValue} meter = ${baseValue * meterToFeet} feet` 
 })
